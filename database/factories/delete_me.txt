@@ -1,0 +1,2 @@
+This file is here simply to force git to commit the database/factories 
+directory, since it is needed by Laravel's post-install script.

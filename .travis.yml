@@ -1,0 +1,35 @@
+dist: trusty
+sudo: false
+language: php
+
+php:
+  - 7.1
+  - 7.2
+
+notifications:
+  email:
+    on_failure: always
+
+branches:
+  only:
+    - master
+
+services:
+  - mysql
+
+before_install:
+  - composer self-update
+  - mysql -e 'CREATE DATABASE phpunit_test;'
+
+install:
+  - travis_retry composer install --no-interaction
+  - travis_retry gem install mailcatcher
+
+before_script:
+  - php artisan migrate --env=testing
+  - APP_ENV=testing php -d variables_order=EGPCS -S localhost:8000 -t public/ &
+  - mailcatcher
+  - sleep 3
+
+script:
+  - phpunit tests
