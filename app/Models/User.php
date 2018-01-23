@@ -32,7 +32,7 @@ class User extends Authenticatable
 	 * 
 	 * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
 	 */
-	public function roles()
+	public function role()
 	{
 		return(
 			$this->belongsTo('App\Models\Role', 'role_id', 'id')

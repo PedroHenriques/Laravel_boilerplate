@@ -8,7 +8,7 @@ use PHPUnit\Framework\TestCase;
 
 class UserTest extends TestCase
 {
-  public function testRolesItShouldDefineTheRelationshipWithTheRoleModelAndReturnTheRelations()
+  public function testRoleItShouldDefineTheRelationshipWithTheRoleModelAndReturnTheRelations()
   {
     $belongsToMock = $this->createMock(BelongsTo::class);
     $userModel = $this->getMockBuilder(User::class)
@@ -20,6 +20,6 @@ class UserTest extends TestCase
     ->with('App\Models\Role', 'role_id', 'id')
     ->willReturn($belongsToMock);
 
-    $this->assertEquals($belongsToMock, $userModel->roles());
+    $this->assertEquals($belongsToMock, $userModel->role());
   }
 }
