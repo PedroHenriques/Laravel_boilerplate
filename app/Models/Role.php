@@ -5,7 +5,7 @@ namespace App\Models;
 class Role extends BaseModel
 {
 	/**
-	 * The users that belong to the role.
+	 * The users that have this role.
 	 * 
 	 * @return \Illuminate\Database\Eloquent\Relations\HasMany
 	 */
