@@ -41,7 +41,7 @@
         }
     },
     "scripts": {
-        "test" : "phpunit --stop-on-failure --verbose",
+        "test" : "phpunit --verbose",
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
         ],
