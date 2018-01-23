@@ -43,8 +43,8 @@ class Kernel extends HttpKernel
 		],
 
 		'auth.full' => [
-			\Illuminate\Auth\Middleware\Authenticate::class,
-			\App\Http\Middleware\RedirectIfInactive::class,
+			'auth',
+			'activeAccount',
 		],
 	];
 
