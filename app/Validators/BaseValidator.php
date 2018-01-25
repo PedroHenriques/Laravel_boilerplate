@@ -62,4 +62,20 @@ abstract class BaseValidator
   {
     return($this->errors === null ? [] : $this->errors->toArray());
   }
+
+  /**
+   * Return all the rules for this validator.
+   */
+  public function getRules()
+  {
+    return($this->rules);
+  }
+  
+  /**
+   * Return all the messages for this validator.
+   */
+  public function getMessages()
+  {
+    return($this->messages);
+  }
 }
