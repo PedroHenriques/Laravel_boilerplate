@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [2.2.0] - 2018-02-13
+### Added
+- Note in readme.md file about the consequences of changing the value of `APP_KEY` for the testing environment provided by this boilerplate.
+
+### Fixed
+- Fixed bug with "BaseJob.php" where the class was named "BaseJobs" instead of "BaseJob".
+
 ## [2.1.0] - 2018-01-25
 ### Added
 - "getRules()" and "getMessages()" to BaseValidator.

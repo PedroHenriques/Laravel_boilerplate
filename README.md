@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/PedroHenriques/Laravel_boilerplate.svg?branch=master)](https://travis-ci.org/PedroHenriques/Laravel_boilerplate)
+[![Build Status](https://travis-ci.org/PedroHenriques/Laravel_boilerplate.svg?branch=5.5)](https://travis-ci.org/PedroHenriques/Laravel_boilerplate)
 
 # Laravel 5.5.* Boilerplate
 
@@ -34,6 +34,9 @@
 3. Create the project's test database, matching the name inserted in step 1
 
 4. Run the database migrations on your test database using `php artisan migrate --env=testing`
+
+**NOTE:** The database fixtures used in the integration and end-to-end tests expect the `APP_KEY` value in use for the **testing** environment to be the one defined by this boilerplate.
+If you change its value, all the passwords and tokens used in the fixtures will have to be rehashed using the new `APP_KEY`.
 
 ## What this boilerplate contains
 

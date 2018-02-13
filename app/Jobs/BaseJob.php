@@ -2,7 +2,7 @@
 
 namespace App\Jobs;
 
-abstract class BaseJobs
+abstract class BaseJob
 {
   
 }
