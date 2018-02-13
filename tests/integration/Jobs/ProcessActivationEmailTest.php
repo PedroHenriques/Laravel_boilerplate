@@ -49,7 +49,7 @@ class ProcessActivationEmailTest extends BaseIntegrationCase
     ];
   }
 
-  public function setUp()
+  public function setUp(): void
   {
     parent::setUp();
     parent::clearEmails();

@@ -48,7 +48,7 @@ class ActivationServiceTest extends BaseIntegrationCase
     ];
   }
 
-  public function setUp()
+  public function setUp(): void
   {
     parent::setUp();
     parent::clearEmails();

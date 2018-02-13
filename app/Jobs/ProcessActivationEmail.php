@@ -12,7 +12,7 @@ use Illuminate\Database\ConnectionInterface;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\{InteractsWithQueue, SerializesModels};
 
-class ProcessActivationEmail extends BaseJobs implements ShouldQueue
+class ProcessActivationEmail extends BaseJob implements ShouldQueue
 {
 	use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 

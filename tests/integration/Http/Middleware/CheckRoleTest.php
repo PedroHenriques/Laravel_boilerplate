@@ -30,7 +30,7 @@ class CheckRoleTest extends BaseIntegrationCase
     ];
   }
 
-  public function setUp()
+  public function setUp(): void
   {
     parent::setUp();
     $this->middleware = $this->getApp()->make('App\Http\Middleware\CheckRole');

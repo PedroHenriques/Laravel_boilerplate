@@ -15,7 +15,6 @@ use App\Validators\ActivationValidator;
 use Carbon\Carbon;
 use Illuminate\Contracts\Config\Repository as Config;
 use Illuminate\Contracts\Hashing\Hasher;
-use Illuminate\Contracts\Logging\Log;
 use Illuminate\Database\ConnectionInterface;
 use Illuminate\Database\Query\Builder;
 use Illuminate\Events\Dispatcher as EventDispatcher;
@@ -23,6 +22,7 @@ use Illuminate\Foundation\Bus\PendingDispatch;
 use Illuminate\Http\Request;
 use Illuminate\Support\Collection;
 use PHPUnit\Framework\TestCase;
+use Psr\Log\LoggerInterface;
 
 class ActivationServiceTest extends TestCase
 {
@@ -36,7 +36,7 @@ class ActivationServiceTest extends TestCase
     $this->eventDispatcherMock = $this->createMock(EventDispatcher::class);
     $this->userMock = $this->createMock(User::class);
     $this->jobDispatcherMock = $this->createMock(JobDispatcher::class);
-    $this->logMock = $this->createMock(Log::class);
+    $this->logMock = $this->createMock(LoggerInterface::class);
     $this->requestMock = $this->createMock(Request::class);
 
     $this->service = new ActivationService(

@@ -29,7 +29,7 @@ class RoleManagerTest extends BaseIntegrationCase
     ];
   }
 
-  public function setUp()
+  public function setUp(): void
   {
     parent::setUp();
     $this->pdo = parent::getPdo();

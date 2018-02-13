@@ -4,6 +4,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [3.0.0] - 2018-02-13
+### Added
+- Switched from Laravel `5.5.*` to Laravel `5.6.*`.
+
+### Changed
+- The readme.md file to include information about the branches supporting previous versions of Laravel.
+
+### Fixed
+- Fixed bug with "BaseJob.php" where the class was named "BaseJobs" instead of "BaseJob".
+
 ## [2.1.0] - 2018-01-25
 ### Added
 - "getRules()" and "getMessages()" to BaseValidator.

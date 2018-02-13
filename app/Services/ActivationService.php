@@ -13,9 +13,9 @@ use App\Validators\ActivationValidator;
 use Illuminate\Contracts\Config\Repository as Config;
 use Illuminate\Contracts\Hashing\Hasher;
 use Illuminate\Contracts\Events\Dispatcher as EventDispatcher;
-use Illuminate\Contracts\Logging\Log;
 use Illuminate\Database\ConnectionInterface;
 use Illuminate\Http\Request;
+use Psr\Log\LoggerInterface;
 
 class ActivationService extends BaseService
 {
@@ -39,7 +39,7 @@ class ActivationService extends BaseService
    * @param \Illuminate\Contracts\Events\Dispatcher $eventDispatcher
    * @param \App\Models\User $userEloquent
    * @param \App\Jobs\JobDispatcher $jobDispatcher
-   * @param \Illuminate\Contracts\Logging\Log $logger
+   * @param \Psr\Log\LoggerInterface $logger
    */
   public function __construct(
     ActivationValidator $validator,
@@ -50,7 +50,7 @@ class ActivationService extends BaseService
     EventDispatcher $eventDispatcher,
     User $userEloquent,
     JobDispatcher $jobDispatcher,
-    Log $logger
+    LoggerInterface $logger
   ) {
     $this->validator = $validator;
     $this->connection = $connection;
