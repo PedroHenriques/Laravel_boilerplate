@@ -68,7 +68,7 @@ class ForgotPasswordControllerTest extends MinkTestCase
     $this->assertEquals(1, count($sentEmails));
     $this->assertEquals('<'.$configRepo->get('mail.from.address').'>', $sentEmails[0]['sender']);
     $this->assertEquals('<'.$this->fixtures['users'][0]['email'].'>', $sentEmails[0]['recipients'][0]);
-    $this->assertEquals('Reset Password', $sentEmails[0]['subject']);
+    $this->assertEquals('Reset Password Notification', $sentEmails[0]['subject']);
 
     $emailContents = html_entity_decode(urldecode($this->getEmailBody($sentEmails[0]['id'])));
     $reMatches = null;
@@ -122,7 +122,7 @@ class ForgotPasswordControllerTest extends MinkTestCase
     $this->assertEquals(1, count($sentEmails));
     $this->assertEquals('<'.$configRepo->get('mail.from.address').'>', $sentEmails[0]['sender']);
     $this->assertEquals('<'.$this->fixtures['users'][0]['email'].'>', $sentEmails[0]['recipients'][0]);
-    $this->assertEquals('Reset Password', $sentEmails[0]['subject']);
+    $this->assertEquals('Reset Password Notification', $sentEmails[0]['subject']);
 
     $emailContents = html_entity_decode(urldecode($this->getEmailBody($sentEmails[0]['id'])));
     $reMatches = null;
